@@ -1,7 +1,7 @@
 <h1 align="center">
     AgentVision
     <br>
-    <small>An AI agent that reads web pages the way a person does</small>
+    <small>An AI agent that reads Link-in-bio web pages the way a person does</small>
 </h1>
 
 <p align="center">
