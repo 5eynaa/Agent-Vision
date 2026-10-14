@@ -9,7 +9,6 @@
     <img alt="Selenium" src="https://img.shields.io/badge/Selenium-Chrome-43B02A?logo=selenium&logoColor=white">
     <img alt="Gemini" src="https://img.shields.io/badge/Gemini-API-8E75B2?logo=googlegemini&logoColor=white">
     <img alt="pandas" src="https://img.shields.io/badge/pandas-CSV-150458?logo=pandas&logoColor=white">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow">
 </p>
 
 <p align="center">
@@ -76,21 +75,17 @@ You'll need Python 3, Google Chrome and a Gemini API key.
 pip install pandas pillow google-genai selenium webdriver-manager
 ```
 
-> [!IMPORTANT]
-> Never commit your real API key. Keep the placeholder in the repo and swap it in locally.
-
 ## Getting started
 
 Open `agentvision.py` and fill in the config block at the top.
 
 ```python
-API_KEY = "YOUR_GEMINI_API_KEY"
-MODEL_NAME = "YOUR_GEMINI_MODEL"
-INPUT_FILE = "YOUR_INPUT_FILE.csv"
-OUTPUT_FILE = "YOUR_OUTPUT_FILE.csv"
+API_KEY = "gemini_API_key"
+INPUT_FILE = "input_file.csv"
+OUTPUT_FILE = "output_file.csv"
 
 PROXIES = [
-    "http://YOUR_PROXY_1:PORT",
+    "http://HOST:PORT",
 ]
 
 TARGET_DOMAINS = ["YOUR_TARGET_DOMAIN_1.com"]
@@ -123,15 +118,6 @@ example_user,https://example.com/profile,1200,300,Yes,
 ## Limits
 
 Every page uses at least two Gemini calls, so big runs cost money and take time. On link-in-bio pages, any button the model flags counts as a Yes, which means some false positives. The date of birth filler assumes the fields go day, month, year. It won't work on sites that order them differently.
-
-## Disclaimer
-
-> [!CAUTION]
-> This project is for learning and portfolio purposes. Check a site's terms before you point this at it, follow the law where you are, and respect robots.txt.
-
-## License
-
-MIT
 
 ---
 
